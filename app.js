@@ -15,7 +15,7 @@ const post = [
   {
     titolo: "Introduzione a JavaScript",
     contenuto: "JavaScript è un linguaggio di programmazione versatile e potente, utilizzato principalmente per lo sviluppo web. In questo post esploreremo le basi del linguaggio e le sue caratteristiche principali.",
-    immagine: "/images/javascript-intro.jpg",
+    immagine: "/asset/img/nodejs.png",
     tags: ["javascript", "programmazione", "web development", "tutorial"]
   },
 ]
