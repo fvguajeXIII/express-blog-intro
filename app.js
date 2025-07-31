@@ -2,14 +2,6 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
-app.get("/", (req, res) => {
-  res.send("Server del mio blog");
-});
-
-app.listen(port, () => {
-  console.log(`Server in ascolto sulla porta ${port}`);
-});
-
 //Array di post del blog
 const post = [
   {
@@ -42,4 +34,20 @@ const post = [
     immagine: "/asset/img/nodejs2.png",
     tags: ["deploy", "hosting", "production", "nodejs", "devops"]
   }
-]
+];
+
+app.get("/", (req, res) => {
+  res.send("Server del mio blog");
+});
+
+//Rotta per la bacheca che deve restituire tutti i post in JSON
+app.get("/bacheca", (req, res) => {
+  res.json({
+    post: post,
+    count: post.length
+  });
+});
+
+app.listen(port, () => {
+  console.log(`Server in ascolto sulla porta ${port}`);
+});
